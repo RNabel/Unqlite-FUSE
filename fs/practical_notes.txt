@@ -1,0 +1,38 @@
+#Functionality
+Multi-level directories
+Strict tree structure
+File and directory creation and update
+Implement caching
+
+#Reading
+man 2 stat
+man 2 chmod
+http://fuse.sourceforge.net/helloworld.html
+http://www.cs.hmc.edu/~geoff/classes/hmc.cs135.201001/homework/fuse/fuse_doc.html
+
+#Notes
+Always specify the key size.
+
+#Debugging
+Display a key (id) value in hex:
+(gdb) x/16xb root_object.id
+
+#Using the starter code
+mkdir /cs/scratch/<username>/mnt
+./newfs /cs/scratch/<username>/mnt
+fusermount -u /cs/scratch/<username>/mnt
+
+#Debugging
+In one ternimal:
+gdb newfs
+<set breakpoints>
+run -s -d <mountpoint>
+
+In a second terminal run a program or issue shell commands to access/update the file system.
+
+#URLs
+http://www.cs.hmc.edu/~geoff/classes/hmc.cs135.201001/homework/fuse/fuse_doc.html
+http://fuse.sourceforge.net/
+http://www.cs.nmsu.edu/~pfeiffer/fuse-tutorial/
+http://fuse.sourceforge.net/helloworld.html
+http://www.linux.org/threads/fuse.6211/
